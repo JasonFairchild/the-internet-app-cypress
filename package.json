@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JasonFairchild/the-internet-app-cypress#readme",
   "devDependencies": {
+    "@testing-library/cypress": "^7.0.1",
     "cypress": "^5.4.0"
   }
 }
