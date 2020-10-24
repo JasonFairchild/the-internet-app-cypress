@@ -1,0 +1,22 @@
+{
+  "name": "the-internet-app-cypress",
+  "version": "1.0.0",
+  "description": "example cypress tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonFairchild/the-internet-app-cypress.git"
+  },
+  "author": "Jason Fairchild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonFairchild/the-internet-app-cypress/issues"
+  },
+  "homepage": "https://github.com/JasonFairchild/the-internet-app-cypress#readme",
+  "devDependencies": {
+    "cypress": "^5.4.0"
+  }
+}
