@@ -24,3 +24,10 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 import '@testing-library/cypress/add-commands';
+
+Cypress.Commands.add('typeLogin', (username, pw) => {
+    cy.findByRole('textbox', { name: /Username/ })
+      .type(username);
+    cy.findByLabelText('Password')
+      .type(pw);
+})
