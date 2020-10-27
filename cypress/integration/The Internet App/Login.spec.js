@@ -37,7 +37,7 @@ describe("Login page", () => {
   });
 
   it("Verifies successful logout", () => {
-    //  Normally I would login through API after validating UI login separately, but this isn't real auth
+    //  If dealing with real auth I would login through API after validating UI login separately
     cy.typeLogin(validUsername, validPassword)
     cy.findByRole('button', { name: /Login/ })
       .click();
