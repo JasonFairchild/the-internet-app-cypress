@@ -6,7 +6,7 @@ describe('Notification Message', () => {
     });
 
     it('Verifies section header', () => {
-      
+      cy.findByRole('heading', { name: /Notification Message/ });
     });
 
     /*
@@ -17,12 +17,24 @@ describe('Notification Message', () => {
     it('Verifies successful message match', () => {
       cy.route2('notification_message_rendered', (req) => {
         req.reply((res) => {
-          console.log(res.body);
-          res.send({ fixture: 'static-message-response.html'});
+          res.send({ fixture: 'success-static-message-response.html'});
         })
       });
 
       cy.findByRole('link', {name: /Click here/i})
         .click();
+      cy.findByRole('link', { name: /×/ });
+    });
+
+    it('Verifies unsuccessful message match', () => {
+      cy.route2('notification_message_rendered', (req) => {
+        req.reply((res) => {
+          res.send({ fixture: 'unsuccessful-static-message-response.html'});
+        })
+      });
+
+      cy.findByRole('link', {name: /Click here/i})
+        .click();
+      cy.contains('Action unsuccesful, please try again');
     });
 });

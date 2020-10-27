@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Phone number page without country select", () => {
+  // These tests do an odd reload because the site is different than the baseUrl set in config
   beforeEach(() => {
     cy.visit("https://catamphetamine.gitlab.io/react-phone-number-input/");
   });
