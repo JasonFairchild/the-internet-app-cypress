@@ -15,7 +15,7 @@ describe("Login page", () => {
   });
 
   it("Verifies invalid username", () => {
-    //Custom command for working with the login form
+    // Custom command for working with the login form
     cy.typeLogin(invalidUsername, validPassword)
     cy.findByRole('button', { name: /Login/ })
       .click();
@@ -37,7 +37,7 @@ describe("Login page", () => {
   });
 
   it("Verifies successful logout", () => {
-    //  If dealing with real auth I would login through API after validating UI login separately
+    // If dealing with real auth I would login through API after validating UI login separately
     cy.typeLogin(validUsername, validPassword)
     cy.findByRole('button', { name: /Login/ })
       .click();

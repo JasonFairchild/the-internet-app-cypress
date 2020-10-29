@@ -26,8 +26,8 @@
 import '@testing-library/cypress/add-commands';
 
 Cypress.Commands.add('typeLogin', (username, pw) => {
-    cy.findByRole('textbox', { name: /Username/ })
-      .type(username);
-    cy.findByLabelText('Password')
-      .type(pw);
+  cy.findByRole('textbox', { name: /Username/ })
+    .type(username);
+  cy.findByLabelText('Password')
+    .type(pw);
 })
