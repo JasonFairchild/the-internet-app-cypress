@@ -23,7 +23,7 @@ describe('Notification Message', () => {
 
       cy.findByRole('link', {name: /Click here/i})
         .click();
-      cy.findByRole('link', { name: /×/ });
+      cy.contains('Action successful');
     });
 
     it('Verifies unsuccessful message match', () => {
